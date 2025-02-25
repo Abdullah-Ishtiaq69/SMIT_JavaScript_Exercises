@@ -28,7 +28,7 @@ var fullName* ;
 var -fullname ;
 var full-Name ;
 var fullName- ;
-*/
+*/ 
 
 document.write ("<h2>Rules for naming JS variables</h2>");
 document.write ("Variables name can only contain, numbers, $ (dollar symbol) or _ (underscore) .<b> For Example : $my_1stVariable </b><br />");
