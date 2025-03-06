@@ -3,9 +3,9 @@ var products = [
         id: 101,
         title: "Car",
         variations: [
-            { id: 1, color: "black", price: 50000, quantity: 5 },
-            { id: 2, color: "red", price: 50000, quantity: 3 },
-            { id: 3, color: "silver", price: 55000, quantity: 4 },
+            { id: 1, color: "black", price: 5000, quantity: 5 },
+            { id: 2, color: "red", price: 5500, quantity: 3 },
+            { id: 3, color: "silver", price: 5500, quantity: 4 },
         ],
         reviews: [
             {
@@ -41,15 +41,15 @@ var products = [
         id: 102,
         title: "Mobile",
         variations: [
-            { id: 1, color: "black", price: 50000, quantity: 5 },
-            { id: 2, color: "red", price: 50000, quantity: 1 },
-            { id: 3, color: "silver", price: 55000, quantity: 8 },
+            { id: 1, color: "black", price: 5000, quantity: 5 },
+            { id: 2, color: "red", price: 5000, quantity: 1 },
+            { id: 3, color: "silver", price: 5000, quantity: 8 },
         ],
         reviews: [
             {
                 id: 1,
                 user: "Ahmad",
-                rating: 4.0,
+                rating: 5.0,
                 title: "Good Product",
                 comments: "It is a very good product ....",
                 date: "06-02-2021",
@@ -58,7 +58,7 @@ var products = [
             {
                 id: 2,
                 user: "Zubair",
-                rating: 4.5,
+                rating: 5.0,
                 title: "Very Good Product",
                 comments: "zubair It is a very good product ....",
                 date: "05-02-2021",
@@ -79,14 +79,14 @@ var products = [
         id: 103,
         title: "Bike",
         variations: [
-            { id: 1, color: "black", price: 55000, quantity: 20 },
-            { id: 2, color: "red", price: 50000, quantity: 1 },
+            { id: 1, color: "black", price: 5000, quantity: 20 },
+            { id: 2, color: "red", price: 5000, quantity: 1 },
         ],
         reviews: [
             {
                 id: 1,
                 user: "Ahmad",
-                rating: 4.0,
+                rating: 8.0,
                 title: "Good Product",
                 comments: "It is a very good product ....",
                 date: "06-02-2021",
@@ -95,7 +95,7 @@ var products = [
             {
                 id: 2,
                 user: "Zubair",
-                rating: 3.0,
+                rating: 8.0,
                 title: "Very Good Product",
                 comments: "zubair It is a very good product ....",
                 date: "05-02-2021",
@@ -159,7 +159,20 @@ var products = [
 
 // Question 6
 
-// -------------------------------------------------------------------------------------------------------
+// var highestRating = 0;
+// var highestRated = null;
+// for (j = 0; j < products.length; j++) {
+//     sum = 0;
+//     for (k = 0; k < products[j].reviews.length; k++) {
+//         sum += products[j].reviews[k].rating;
+//     };
+//     averageSum = sum / products[j].reviews.length;
+//     if (averageSum > highestRating) {
+//         highestRating = averageSum;
+//         highestRated = products[j].title;
+//     };
+// };
+// console.log("Highest Rated Product is : " + highestRated);
 
 // Question 7
 
@@ -172,5 +185,3 @@ var products = [
 // };
 
 // Question 8
-
-// --------------------------------------------------------------------------------------
