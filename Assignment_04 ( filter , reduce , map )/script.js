@@ -3,9 +3,9 @@ var products = [
         id: 101,
         title: "Sony LED 40 inch",
         variations: [
-            { id: 1, color: "black", price: 50000, quantity: 5 },
-            { id: 2, color: "red", price: 50000, quantity: 1 },
-            { id: 3, color: "silver", price: 55000, quantity: 8 },
+            { id: 1, color: "black", price: 1000, quantity: 2 },
+            { id: 2, color: "red", price: 1000, quantity: 9 },
+            { id: 3, color: "silver", price: 1000, quantity: 2 },
         ],
         reviews: [
             {
@@ -41,9 +41,9 @@ var products = [
         id: 102,
         title: "Mobile",
         variations: [
-            { id: 1, color: "black", price: 50000, quantity: 5 },
-            { id: 2, color: "red", price: 50000, quantity: 1 },
-            { id: 3, color: "silver", price: 55000, quantity: 8 },
+            { id: 1, color: "black", price: 1000, quantity: 2 },
+            { id: 2, color: "red", price: 1000, quantity: 6 },
+            { id: 3, color: "silver", price: 1000, quantity: 2 },
         ],
         reviews: [
             {
@@ -79,8 +79,8 @@ var products = [
         id: 103,
         title: "Bike",
         variations: [
-            { id: 1, color: "green", price: 55000, quantity: 5 },
-            { id: 2, color: "black", price: 50000, quantity: 1 },
+            { id: 1, color: "black", price: 1000, quantity: 9 },
+            { id: 2, color: "red", price: 1000, quantity: 6 },
         ],
         reviews: [
             {
@@ -120,12 +120,75 @@ var products = [
 // let product = products.map((p) => (p.variations.filter((p) => (p.color === 'black'))));
 // console.log(product);
 
+// Another Way
+
+// let product = products.filter((p) => {
+//     let filteredVariation = p.variations.filter((p) => (p.color === 'black')).length;
+//     return filteredVariation;
+// });
+// console.log(product);
+
 // Question 53  /  3
 
-// let product = products.reduce((prev, curr) => {
-//     let finalProduct = curr.variations.reduce((prev2, curr2) => (prev2 + curr2.quantity), 0);
-//     return finalProduct + prev
-// }, 0);
+// let product = products.reduce((prev , curr) => {
+//     let allQuantity = curr.variations.reduce((prev2 , curr2) => (prev2 + curr2.quantity) , 0);
+//     return prev + allQuantity;
+// } , 0);
 // console.log(product);
 
 // Question 54  /  4
+
+// let product = products.map((p) => {
+//     let filteredProduct = p.reviews.filter((p) => (p.status));
+
+//     let totalReviews = filteredProduct.reduce((prev, curr) => (prev + curr.rating), 0);
+
+//     let averageReviews = totalReviews / filteredProduct.length;
+
+//     return averageReviews
+// })
+// console.log(product);
+
+// Question 55  /  5
+
+// let product = products.filter(p => p.reviews.filter(p => p.rating === 5.0).length);
+// console.log(product);
+
+// Question 56  /  6
+
+// let product = products.map(p => ({
+//     title : p.title,
+//     variations : p.variations.map(j => ({
+//         color : j.color,
+//         price : j.price,
+//         quantity : j.quantity,
+//     })),
+// }));
+// console.log(product);
+
+// Question 57  /  7
+
+// let product = products.reduce((prev , curr) => {
+//     totalCost = curr.variations.reduce((prev2 , curr2) => {
+//         return prev2 + (curr2.price * curr2.quantity);
+//     } , 0)
+//     return prev + totalCost;
+// } , 0);
+// console.log(product);
+
+// Question 58  /  8
+
+// let product = products.filter(p => p.variations.filter(p => p.quantity > 5).length);
+// console.log(product);
+
+// Question 59  /  9
+
+// let product = products.map(p => ({
+//     title : p.title,
+//     totalVariations : p.variations.length,
+//     totalReviews : p.reviews.length,
+// }));
+
+// console.log(product);
+
+// Question 60  /  10

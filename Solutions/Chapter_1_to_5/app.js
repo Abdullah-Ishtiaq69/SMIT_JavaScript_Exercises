@@ -63,8 +63,48 @@
 // var design = '“▬▬▬▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬▬▬▬”';
 // alert(design);
 
-// ------------------------------------------------------> <------------------------------------------------------
+// Question 14
 
-// Repeat all the questions using the following methods:
-// 1) console.log();
-// 2) document.write(); 
+// var age = 16;
+// alert('I am ' + age + ' years old');
+
+// Question 15
+
+// var birthYear = 2009;
+// var p1 = document.getElementById('p1');
+// var p2 = document.getElementById('p2');
+// p1.innerHTML = 'My birth year is ' + birthYear;
+// p2.innerHTML = 'Data type of my declared variable is number';
+
+// Question 16
+
+// var visitorName = prompt('Enter Your Name');
+// var productTitle = prompt('Enter your Product name that you want to buy');
+// var productQuantity = prompt('Enter your Product Quantity');
+
+// var p1 = document.getElementById('p1');
+// p1.innerHTML = '<b>' + visitorName + '</b> ' + 'ordered ' + '<b>' + productQuantity + ' ' + productTitle + '</b> on XYZ Clothing store.';
+
+// Question 17
+
+// var num1 = +prompt('Enter a number');
+// var num2 = +prompt('Enter a number');
+// var sum = num1 + num2;
+// alert('Sum of ' + num1 + ' and ' + num2 + ' is ' + sum);
+
+// Question 18
+
+// var num1 = +prompt('Enter a number');
+// var num2 = +prompt('Enter a number');
+// var sub = num1 - num2;
+// alert('Subtraction of ' + num1 + ' and ' + num2 + ' is ' + sub);
+
+// var num1 = +prompt('Enter a number');
+// var num2 = +prompt('Enter a number');
+// var mul = num1 * num2;
+// alert('Multiplication of ' + num1 + ' and ' + num2 + ' is ' + mul);
+
+// var num1 = +prompt('Enter a number');
+// var num2 = +prompt('Enter a number');
+// var div = num1 / num2;
+// alert('Division of ' + num1 + ' and ' + num2 + ' is ' + div);
