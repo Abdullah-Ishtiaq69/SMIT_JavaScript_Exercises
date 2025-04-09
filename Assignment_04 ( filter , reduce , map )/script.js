@@ -42,7 +42,7 @@ var products = [
         title: "Mobile",
         variations: [
             { id: 1, color: "black", price: 1000, quantity: 2 },
-            { id: 2, color: "red", price: 1000, quantity: 6 },
+            { id: 2, color: "red", price: 1000, quantity: 13 },
             { id: 3, color: "silver", price: 1000, quantity: 2 },
         ],
         reviews: [
@@ -192,3 +192,17 @@ var products = [
 // console.log(product);
 
 // Question 60  /  10
+
+// let product = products.reduce((prev , curr) => {
+
+//     let totalStock = curr.variations.reduce((prev2 , curr2) => (prev2 + curr2.quantity) , 0);
+    
+//     if (prev === 0 || totalStock > prev.totalStock) {
+//         return {title : curr.title , totalStock : totalStock}
+//     };
+
+//     return prev;
+
+// },0);
+
+// console.log(product);
