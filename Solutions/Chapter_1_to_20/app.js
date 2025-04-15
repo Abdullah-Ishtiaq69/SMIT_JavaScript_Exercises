@@ -279,3 +279,152 @@
 // estimatedAge.innerHTML = `Estimated Maximum Age: ${userMaximumAge}`;
 // perday.innerHTML = `Amount of Snacks per Day: ${userPerDaySnacks}`;
 // final.innerHTML = `${finalOutput}`;
+
+// Question 30
+
+// var a = 10;
+
+// var result = document.getElementById('result');
+// var initial = document.getElementById('initial');
+// var line = document.getElementById('line');
+// var p1 = document.getElementById('p1');
+// var p1p2 = document.getElementById('p1p2');
+// var p2 = document.getElementById('p2');
+// var p2p2 = document.getElementById('p2p2');
+// var p3 = document.getElementById('p3');
+// var p3p2 = document.getElementById('p3p2');
+// var p4 = document.getElementById('p4');
+// var p4p2 = document.getElementById('p4p2');
+
+// result.innerHTML = `Result:`;
+// initial.innerHTML = `The Value of a is: ${a}`;
+// line.innerHTML = `<b>......................................</b>`;
+// p1.innerHTML = `The value of ++a is: ${++a}`;
+// p1p2.innerHTML = `Now the value of ++a is: ${a}`;
+// p2.innerHTML = `The value of a++ is: ${a++}`;
+// p2p2.innerHTML = `Now the value of a is: ${a}`;
+// p3.innerHTML = `The value of --a is: ${--a}`;
+// p3p2.innerHTML = `Now the value of a is: ${a}`;
+// p4.innerHTML = `The value of a-- is: ${a--}`;
+// p4p2.innerHTML = `Now the value of a is: ${a}`;
+
+// Question 31
+
+// var a = 2, b = 1;
+// var result = --a - --b + ++b + b--;
+// console.log(result);
+
+// var A = document.getElementById('a');
+// var B = document.getElementById('b');
+// var Result = document.getElementById('result');
+
+// A.innerHTML = `a is ${a}`;
+// B.innerHTML = `b is ${b}`;
+// Result.innerHTML = `result is ${result}`;
+
+// // --a = 1 , --b = 0 -> 1 - 0 = 1
+// // 1 + 1 + 1 -> 3
+
+// Question 32
+
+// var userName = prompt('Enter your Name');
+// var userGreet = `Welcome`;
+
+// var greetingMessage = document.getElementById('greet');
+// greetingMessage.innerHTML = `${userGreet} ${userName}`;
+
+// Question 33
+
+// var userTable = +prompt('Enter a number to generate its table');
+// var startingNum = 1;
+
+// var tableNumber = document.getElementById('multiplication-table');
+// var num1 = document.getElementById('table-1');
+// var num2 = document.getElementById('table-2');
+// var num3 = document.getElementById('table-3');
+// var num4 = document.getElementById('table-4');
+// var num5 = document.getElementById('table-5');
+// var num6 = document.getElementById('table-6');
+// var num7 = document.getElementById('table-7');
+// var num8 = document.getElementById('table-8');
+// var num9 = document.getElementById('table-9');
+// var num10 = document.getElementById('table-10');
+
+// if (userTable !== 0) {
+//     tableNumber.innerHTML = `You selected ${userTable}`;
+//     num1.innerHTML = `${userTable} x ${startingNum} = ${startingNum++ * userTable}`
+//     num2.innerHTML = `${userTable} x ${startingNum} = ${startingNum++ * userTable}`
+//     num3.innerHTML = `${userTable} x ${startingNum} = ${startingNum++ * userTable}`
+//     num4.innerHTML = `${userTable} x ${startingNum} = ${startingNum++ * userTable}`
+//     num5.innerHTML = `${userTable} x ${startingNum} = ${startingNum++ * userTable}`
+//     num6.innerHTML = `${userTable} x ${startingNum} = ${startingNum++ * userTable}`
+//     num7.innerHTML = `${userTable} x ${startingNum} = ${startingNum++ * userTable}`
+//     num8.innerHTML = `${userTable} x ${startingNum} = ${startingNum++ * userTable}`
+//     num9.innerHTML = `${userTable} x ${startingNum} = ${startingNum++ * userTable}`
+//     num10.innerHTML = `${userTable} x ${startingNum} = ${startingNum++ * userTable}`
+// } else {
+//     num1.innerHTML = `${5} x ${startingNum} = ${startingNum++ * 5 }`
+//     num2.innerHTML = `${5} x ${startingNum} = ${startingNum++ * 5 }`
+//     num3.innerHTML = `${5} x ${startingNum} = ${startingNum++ * 5 }`
+//     num4.innerHTML = `${5} x ${startingNum} = ${startingNum++ * 5 }`
+//     num5.innerHTML = `${5} x ${startingNum} = ${startingNum++ * 5 }`
+//     num6.innerHTML = `${5} x ${startingNum} = ${startingNum++ * 5 }`
+//     num7.innerHTML = `${5} x ${startingNum} = ${startingNum++ * 5 }`
+//     num8.innerHTML = `${5} x ${startingNum} = ${startingNum++ * 5 }`
+//     num9.innerHTML = `${5} x ${startingNum} = ${startingNum++ * 5 }`
+//     num10.innerHTML = `${5} x ${startingNum} = ${startingNum++ * 5}`
+// };
+
+// Question 34
+
+// var sub1 = 'English';
+// var sub2 = 'Math';
+// var sub3 = 'Urdu';
+// var tMarksOfSub1 = 100;
+// var tMarksOfSub2 = 100;
+// var tMarksOfSub3 = 100;
+// var sub1ObtainedMarks = +prompt('Enter your obtain marks of sub 1');
+// var sub2ObtainedMarks = +prompt('Enter your obtain marks of sub 2');
+// var sub3ObtainedMarks = +prompt('Enter your obtain marks of sub 3');
+
+// var subjectHeading = document.getElementById('subject-heading');
+// var subjectTotal = document.getElementById('subject-total');
+// var subjectObtain = document.getElementById('subject-obtain');
+// var subjectPercentage = document.getElementById('subject-percentage');
+// var english = document.getElementById('eng');
+// var math = document.getElementById('math');
+// var urdu = document.getElementById('urdu');
+// var englishTotalMarks = document.getElementById('eng-total');
+// var mathTotalMarks = document.getElementById('math-total');
+// var urduTotalMarks = document.getElementById('urdu-total');
+// var englishObtainMarks = document.getElementById('eng-obtain');
+// var mathObtainMarks = document.getElementById('math-obtain');
+// var urduObtainMarks = document.getElementById('urdu-obtain');
+// var englishPercentage = document.getElementById('eng-percentage');
+// var mathPercentage = document.getElementById('math-percentage');
+// var urduPercentage = document.getElementById('urdu-percentage');
+// var totalMarks = document.getElementById('total');
+// var totalObtainMarks = document.getElementById('obtain');
+// var totalPercentage = document.getElementById('percentage');
+
+// subjectHeading.innerHTML = `Subject`;
+// subjectTotal.innerHTML = `Total Marks`;
+// subjectObtain.innerHTML = `Obtained Marks`;
+// subjectPercentage.innerHTML = `Percentage`;
+// english.innerHTML = `${sub1}`;
+// englishTotalMarks.innerHTML = `${tMarksOfSub1}`;
+// englishObtainMarks.innerHTML = `${sub1ObtainedMarks}`;
+// englishPercentage.innerHTML = `${sub1ObtainedMarks / tMarksOfSub1 * 100}%`;
+// math.innerHTML = `${sub2}`;
+// mathTotalMarks.innerHTML = `${tMarksOfSub2}`;
+// mathObtainMarks.innerHTML = `${sub2ObtainedMarks}`;
+// mathPercentage.innerHTML = `${sub2ObtainedMarks / tMarksOfSub2 * 100}%`;
+// urdu.innerHTML = `${sub3}`;
+// urduTotalMarks.innerHTML = `${tMarksOfSub3}`;
+// urduObtainMarks.innerHTML = `${sub3ObtainedMarks}`;
+// urduPercentage.innerHTML = `${sub3ObtainedMarks / tMarksOfSub3 * 100}%`;
+// totalMarks.innerHTML = `${tMarksOfSub1 + tMarksOfSub2 + tMarksOfSub3}`;
+// totalObtainMarks.innerHTML = `${sub1ObtainedMarks + sub2ObtainedMarks + sub3ObtainedMarks}`;
+// totalPercentage.innerHTML = `${(sub1ObtainedMarks + sub2ObtainedMarks + sub3ObtainedMarks) / 3}%`;
+
+// Question 35
