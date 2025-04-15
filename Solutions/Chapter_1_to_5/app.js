@@ -218,3 +218,64 @@
 
 // Question 25
 
+// var dollars = +prompt('Enter dollars to convert in pkr');
+// var riyals = +prompt('Enter riyal to convert in pkr');
+// var dollar = document.getElementById('usdollar');
+// var riyal = document.getElementById('arabriyal');
+// dollar.innerHTML = dollars * 280.53;
+// riyal.innerHTML = riyals * 75;
+
+// Question 26
+
+// var someNumber = 2 + 5 * 10 / 2 ;
+// console.log(someNumber);
+
+// Question 27 
+
+// var birthYear = document.getElementById('birth-year');
+// var currentYear = document.getElementById('current-year');
+// var currentAge = document.getElementById('age');
+
+// var userBirthYear = +prompt('Enter your Birth Year');
+// var userCurrentYear = +prompt('Enter a Current Year');
+// var userAge = userCurrentYear - userBirthYear;
+
+// birthYear.innerHTML = `Your Birth Year is ${userBirthYear}<br /> `;
+// currentYear.innerHTML = `Current Year is ${userCurrentYear} <br / >`;
+// currentAge.innerHTML = `Your Age is ${userAge}`;
+
+// Question 28
+
+// var radius = document.getElementById('radius');
+// var circumference = document.getElementById('circumference');
+// var area = document.getElementById('area');
+
+// var circleRadius = +prompt('Enter a Radius of a Circle');
+// var pi = 3.142;
+// var circleArea = pi * circleRadius * circleRadius;
+
+// radius.innerHTML = `Radius of Circle is ${circleRadius}`;
+// circumference.innerHTML = `Circumference of Circle is ${2 * pi * circleRadius}`;
+// area.innerHTML = `The area of Circle is ${circleArea}`;
+
+// Question 29
+
+// var heading  = document.getElementById('supply');
+// var favSnack = document.getElementById('fav-snack');
+// var currAge = document.getElementById('curr-age')
+// var estimatedAge = document.getElementById('estimated-age');
+// var perday = document.getElementById('per-day');
+// var final = document.getElementById('per-day');
+
+// var userFavSnack = prompt('Enter your Favourite Snack');
+// var userCurrentAge = +prompt('Enter your Age');
+// var userMaximumAge = +prompt('Enter your Maximum Age');
+// var userPerDaySnacks = +prompt('Enter the amount of Snacks per day');
+// var finalOutput = `You will need ${(userMaximumAge - userCurrentAge) * 365 * userPerDaySnacks} ${userFavSnack} to last you until the ripe old age of ${userMaximumAge}`;
+
+// heading.innerHTML = `The Lifetime Supply Calculator`;
+// favSnack.innerHTML = `Favourite Snack: ${userFavSnack}`;
+// currAge.innerHTML = `Current age: ${15}`;
+// estimatedAge.innerHTML = `Estimated Maximum Age: ${userMaximumAge}`;
+// perday.innerHTML = `Amount of Snacks per Day: ${userPerDaySnacks}`;
+// final.innerHTML = `${finalOutput}`;
