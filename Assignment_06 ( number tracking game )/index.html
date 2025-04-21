@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .paernt {
+            height: 300px;
+            max-width: 400px;
+            width: 80%;
+            border: 2px solid red;
+            padding: 30px 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            row-gap: 30px;
+        }
+
+        h2 {
+            color: red;
+        }
+        input {
+            width: 90%;
+            padding: 8px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 2px solid red;
+        }
+        input:focus {
+            outline: none;
+            border: 2px solid rgb(223, 1, 1);
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="paernt">
+        <h2>Guess The Number (1 - 100)</h2>
+        <input type="number" id="input" class="number">
+        <div class="buttons">
+            <button class="first">OK</button>
+            <button class="second">Reset</button>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
