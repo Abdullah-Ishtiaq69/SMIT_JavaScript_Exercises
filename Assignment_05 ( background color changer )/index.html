@@ -15,7 +15,6 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: cadetblue;
             transition: background-color .3s;
         }
         .main {
@@ -38,6 +37,10 @@
             cursor: pointer;
             font-weight: 600;
             font-size: 16px;
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: red;
         }
         @media (max-width: 420px) {
             h1 {
@@ -56,6 +59,7 @@
         <h1>Background Color Changer</h1>
         <div class="primary">
             <button id="btn">Change Color</button>
+            <h3 id="text">Background Color rgb(255 , 255 , 255)</h3>
         </div>
     </div>
 
