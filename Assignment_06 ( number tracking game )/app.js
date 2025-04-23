@@ -13,7 +13,7 @@ okButton.addEventListener('click', () => {
         alert('Please Enter a Number Between 1 to 100')
     } else if (input.value > randomNum) {
         result.innerHTML = `Sorry You Entered Bigger Number 😑`
-    } else (input.value < randomNum) {
+    } else {
         result.innerHTML = `Sorry You Entered Smaller Number 😑`
     }
 });
@@ -21,5 +21,3 @@ okButton.addEventListener('click', () => {
 resetButton.addEventListener('click', () => {
     input.value = ''
 });
-
-console.log(randomNum);
