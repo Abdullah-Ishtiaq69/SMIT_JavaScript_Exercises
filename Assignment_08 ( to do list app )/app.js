@@ -1,38 +1,49 @@
-inputAdd = document.getElementById('input');
-ul = document.getElementById('ul');
-form = document.getElementById('form');
-mainBox = document.getElementById('main');
-tasks = document.getElementById('tasks');
+let tasks = [];
 
-// Add
 
-form.addEventListener('submit' , (e) => {
-    if(inputAdd.value !== ''){
-        e.preventDefault();
-        const li = document.createElement('li');
-        li.innerHTML = `${inputAdd.value.trim()}
-        <span id="edit"><i class="fa-solid fa-pen"></i></span>
-        <span id="delete"><i class="fa-solid fa-trash"></i></span>
-        `;
-        ul.appendChild(li);
-        inputAdd.value = '';
-        inputAdd.focus()
-        textUpdate()
-    } else {
-        alert('Please Enter Some Value');
-    };
-});
+function addTask(){
+    let input = document.getElementById("taskInput");
+    let value = input.value.trim();
 
-// Delete
+    if(value === "") return;
 
-ul.addEventListener('click' , (e) => {
-    if (e.target.classList.contains('fa-trash')) {
-        e.target.closest('li').remove();
-        textUpdate()
-    }
-});
-
-const textUpdate = () => {
-   const text = mainBox.querySelectorAll('li').length;
-    tasks.textContent = `Total Tasks is: ${text}`;
+    tasks.push(value);
+    input.value = "";
+    renderTasks();
 }
+
+function renderTasks(){
+    const taskList = document.getElementById("taskList");
+    const searchQuery = document.getElementById("taskInput").value.toLowerCase();
+
+    taskList.innerHTML = "";
+
+    tasks.forEach((task, index)=>{
+        if(task.toLowerCase().includes(searchQuery)){
+            let li = document.createElement("li");
+
+            li.innerHTML = `
+            <span>${task}</span>
+            <button onclick="editTask(${index})">Edit</button>
+            <button onclick="deleteTask(${index})">Delete</button>`;
+            taskList.appendChild(li)
+        }
+    })
+}
+
+
+function editTask(index){
+    const newTask = prompt("edit your task:", tasks[index]);
+
+    if(newTask !== null && newTask.trim() !== ""){
+        tasks[index] = newTask.trim();
+        renderTasks();
+    }
+}
+
+function deleteTask(index){
+    tasks.splice(index,1);
+    renderTasks();
+}
+
+document.getElementById("taskInput").addEventListener("input", renderTasks)

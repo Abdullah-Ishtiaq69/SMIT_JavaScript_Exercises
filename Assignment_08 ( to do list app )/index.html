@@ -1,41 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <title>JavaScript - Functions</title>
 </head>
-
 <body>
+    <!-- <h1>Hello World!</h1> -->
+
+    <h1>My To-do List</h1>
+
+    <input type="text" placeholder="Add or Search Task" id="taskInput">
+    <button onclick="addTask()" >Add Task</button>
 
 
-
-    <div id="main" class="main">
-
-        <form action="" id="form">
-            <input type="text" id="input">
+    <ul id="taskList"></ul>
 
 
-            <button id="btn">Click me</button>
-        </form>
-
-
-        <ul id="ul">
-            <li>Go to gym <span id="edit"><i class="fa-solid fa-pen"></i></span> <span id="delete"><i class="fa-solid fa-trash"></i></span></li>
-            <li><span id="delete"><i class="fa-solid fa-trash"></i></span> <span id="edit"><i class="fa-solid fa-pen"></i></span> Go to collage</li>
-            <li> <span id="edit"><i class="fa-solid fa-pen"></i></span> <span id="delete"><i class="fa-solid fa-trash"></i></span> Go to home</li>
-        </ul>
-        <span id="tasks">Total Tasks is: 3</span>
-    </div>
-
-
-
-    <script src="app.js"></script>
+    
 </body>
+
+<script src="app.js"></script>
+
 
 </html>
