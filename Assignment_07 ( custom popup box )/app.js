@@ -1,19 +1,9 @@
-var button = document.getElementById('btn');
-var box = document.getElementById('popup');
-var closeButton = document.getElementById('close');
-var overflow = document.getElementById('overflow');
+alert('hello')
 
-box.style.display = 'none';
+const popup = document.querySelector('div');
+const value = document.querySelector('p');
+const button = document.querySelector('button');
 
 button.addEventListener('click' , () => {
-    box.setAttribute('class' , 'main-box');
-});
-
-closeButton.addEventListener('click' , () => {
-    box.removeAttribute('class' , 'main-box')
-});
-
-overflow.addEventListener('click' , () => {
-    box.removeAttribute('class' , 'main-box')
-    box.style.display = 'none'
-});
+    
+})

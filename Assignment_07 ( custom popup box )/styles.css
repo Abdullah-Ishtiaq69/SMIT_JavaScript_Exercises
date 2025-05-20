@@ -1,0 +1,51 @@
+:root {
+    --background-color: #666666;
+    --popup-color: #1f1f1f;
+    --button-color: #a8c7fa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.alert-box {
+    background-color: var(--popup-color);
+    height: 150px;
+    width: 32%;
+    border-radius: 17px;
+    box-shadow: 1px 1px 3px black;
+    margin: 2px auto;
+    padding: 20px;
+    position: relative;
+    bottom: 40px;
+    transition: all ease-in .1s;
+}
+
+.page-says {
+    color: white;
+}
+
+.dynamic {
+    color: white;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+button {
+    padding: 13px 22px;
+    background-color: var(--button-color);
+    font-size: 12px;
+    outline: 2px solid var(--button-color);
+    border: var(--popup-color) 2px solid;
+    border-radius: 18px;
+    cursor: pointer;
+    position: absolute;
+    right: 18px;
+    bottom: 14px;
+}

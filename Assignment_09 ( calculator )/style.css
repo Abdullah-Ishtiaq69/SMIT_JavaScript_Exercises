@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    height: 400px;
+    width: 400px;
+    box-shadow: 8px 8px 7px rgba(0, 0, 0, 0.415) ,-2px -1px 7px rgba(0, 0, 0, 0.433);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.result,
+.clear {
+    height: 40px;
+    border: 2px solid black;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.result {
+    background-color: #abdbe7;
+    width: 70%;
+}
+
+.clear {
+    background-color: lightcoral;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.first-num,
+.second-num,
+.third-num,
+.fourth-num {
+    display: flex;
+    column-gap: 20px;
+}
+
+.first-num div,
+.second-num div,
+.third-num div,
+.fourth-num div {
+    height: 50px;
+    width: 80px;
+    border: 1px solid rgba(128, 128, 128, 0.725);
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.sign {
+    background-color: orange;
+    color: white;
+}
+
+.equal {
+    background-color: #25a8e0;
+    color: white;
+}

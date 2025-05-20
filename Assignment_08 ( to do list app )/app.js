@@ -1,49 +1,65 @@
-let tasks = [];
 
+const addForm = document.querySelector(".add");
+const search = document.querySelector(".search input");
+const list = document.querySelector(".todos");
 
-function addTask(){
-    let input = document.getElementById("taskInput");
-    let value = input.value.trim();
+let editIndex = null;
 
-    if(value === "") return;
+addForm.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-    tasks.push(value);
-    input.value = "";
-    renderTasks();
-}
+    const text = e.target.add.value.trim();
+    console.log(editIndex);
 
-function renderTasks(){
-    const taskList = document.getElementById("taskList");
-    const searchQuery = document.getElementById("taskInput").value.toLowerCase();
+    if (editIndex !== null) {
+        list.children[editIndex].querySelector("span").textContent = text;
+        console.log();
+    } else {
+        list.innerHTML += `<li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>${text}</span>
+        <div>
+          <i class="fas fa-edit edit"></i>
+          <i class="far fa-trash-alt delete"></i>
+        </div>
+      </li>`;
+    }
 
-    taskList.innerHTML = "";
+    addForm.reset();
+});
 
-    tasks.forEach((task, index)=>{
-        if(task.toLowerCase().includes(searchQuery)){
-            let li = document.createElement("li");
+list.addEventListener("click", function (e) {
+    if (e.target.classList.contains("delete")) {
+        e.target.parentElement.parentElement.remove();
+    }
 
-            li.innerHTML = `
-            <span>${task}</span>
-            <button onclick="editTask(${index})">Edit</button>
-            <button onclick="deleteTask(${index})">Delete</button>`;
-            taskList.appendChild(li)
+    if (e.target.classList.contains("edit")) {
+        const li = e.target.parentElement.parentElement;
+        const text = li.querySelector("span").textContent;
+
+        console.log(text);
+
+        console.log();
+
+        addForm.add.value = text;
+
+        editIndex = Array.from(list.children).indexOf(li);
+
+        console.log(editIndex);
+    }
+});
+
+function filterTodos(searchText) {
+    for (let i = 0; i < list.children.length; i++) {
+        const li = list.children[i];
+        if (!li.textContent.includes(searchText)) {
+            li.classList.add("filtered");
+        } else {
+            li.classList.remove("filtered");
         }
-    })
-}
-
-
-function editTask(index){
-    const newTask = prompt("edit your task:", tasks[index]);
-
-    if(newTask !== null && newTask.trim() !== ""){
-        tasks[index] = newTask.trim();
-        renderTasks();
     }
 }
 
-function deleteTask(index){
-    tasks.splice(index,1);
-    renderTasks();
-}
-
-document.getElementById("taskInput").addEventListener("input", renderTasks)
+search.addEventListener("keyup", function (e) {
+    const searchText = e.target.value.trim();
+    filterTodos(searchText);
+});
