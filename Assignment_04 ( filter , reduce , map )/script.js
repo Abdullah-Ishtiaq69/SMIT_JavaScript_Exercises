@@ -454,10 +454,8 @@ const products = [
 
 // Question 62  /  2
 
-const availableColors = products.map(p => {
-    let trueStatus = p.isActive;
-    const finalResult = trueStatus.filter
-    // return trueStatus
-})
+// const availableColors = products.filter((p) => (p.isActive))
+// .map((p) => (p.variations.filter((p) => p.isAvailable).map((p) => (p.color))));
+// console.log(availableColors);
 
-console.log(availableColors);
+// Question 63  /  3

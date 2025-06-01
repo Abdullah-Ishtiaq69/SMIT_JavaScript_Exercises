@@ -1,22 +1,97 @@
-body{
-    background: #352f5b;
-  }
-  .container{
-    max-width: 400px;
-  }
-  input[type=text],
-  input[type=text]:focus{
-    color: #fff;
+:root {
+    --background-color: #352f5b;
+    --primary-color: #423a6f;
+    --secondary-color: #2a2649;
+    --text-color: #fff;
+    --button-color: #007bff;
+}
+
+/* css reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.main {
+    margin: 30px auto 0 auto;
+    width: 300px;
+    text-align: center;
+}
+
+.main>h1 {
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#addTask {
+    width: 100%;
+    padding: 13px;
     border: none;
-    background: rgba(0,0,0,0.2);
-    max-width: 400px;
-  }
-  .todos li{
-    background: #423a6f;
-  }
-  .delete{
+    border-radius: 2px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    box-shadow: none;
+    transition: box-shadow .15s ease-in-out;
+    margin-bottom: 20px;
+}
+
+#addTask:focus {
+    outline: none;
+    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+}
+
+#list {
+    margin-bottom: 20px;
+}
+
+#list>li {
+    position: relative;
+    background-color: var(--primary-color);
+    width: 100%;
+    padding: 13px;
+    text-align: left;
+    border-radius: 2px;
+    margin-bottom: 6px;
     cursor: pointer;
-  }
-  .filtered{
-    display: none !important;
-  }
+}
+
+.fa-trash {
+    position: absolute;
+    top: 13px;
+    right: 4%;
+    cursor: pointer;
+}
+
+button {
+    background-color: var(--button-color);
+    width: 100%;
+    color: var(--text-color);
+    padding: 10px;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+/* utility classes */
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
