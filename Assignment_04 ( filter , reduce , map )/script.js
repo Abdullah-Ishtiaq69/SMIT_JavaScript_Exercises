@@ -239,7 +239,7 @@ const products = [
                 price: 50000,
                 quantity: 1,
                 warranty: "2 years",
-                discount: 5,
+                discount: 1,
                 isAvailable: true
             },
             {
@@ -418,7 +418,7 @@ const products = [
                 title: "Good Product",
                 comment: "Very good product for the price.",
                 date: "2021-02-06",
-                approved: true,
+                approved: false,
                 likes: 2,
                 verifiedPurchase: true
             },
@@ -433,7 +433,7 @@ const products = [
                 title: "Awesome",
                 comment: "I’m impressed by the quality.",
                 date: "2021-02-05",
-                approved: false,
+                approved: true,
                 likes: 5,
                 verifiedPurchase: false
             }
@@ -454,8 +454,51 @@ const products = [
 
 // Question 62  /  2
 
-// const availableColors = products.filter((p) => (p.isActive))
-// .map((p) => (p.variations.filter((p) => p.isAvailable).map((p) => (p.color))));
+// const availableColors = products.filter((act) => act.isActive)
+// .map((vari) => vari.variations.filter((avai) => avai.isAvailable).map((clr) => clr.color))
 // console.log(availableColors);
 
 // Question 63  /  3
+
+// const totalQuantity = products.map((vari) => vari.variations.filter((avai) => avai.isAvailable)
+// .reduce((prev , curr) => (prev + curr.quantity) , 0))
+// .reduce((prev , curr) => (prev + curr));
+// console.log(totalQuantity);
+
+// Question 64  /  4
+
+// const dicountedVariations = products.filter((vari) => vari.variations.filter((dis) => dis.discount > 0).length > 0).map((names) => names.name);
+// console.log(dicountedVariations);
+
+// Question 65  /  5
+
+// const allVariationsAfterDiscount = products.map((product) => {
+//     return {
+//         productName: product.name,
+//         variation: product.variations.map((dis) => {
+//             const discountedProducts = dis.price - (dis.price * dis.discount / 100);
+//             return {
+//                 id: dis.id,
+//                 discount: dis.discount,
+//                 originalPrice: dis.price,
+//                 newPrice: discountedProducts
+//             };
+//         })
+//     };
+// });
+// console.log(allVariationsAfterDiscount);
+
+// Question 66  /  6
+
+// const highestDiscout = products.reduce((accu , curr) => {
+//     return curr.variations.reduce((accu2 , curr2) => {
+//         const currentVariation = {...curr2 , productName: curr.name};
+//         return currentVariation.discount > accu2.discount ? currentVariation : accu2;
+//     } , accu)
+// } , {discount: -Infinity});
+// console.log(highestDiscout);
+
+// Question 66  /  6
+
+// const totalEmails = products.map((vari) => (vari.reviews).filter((appr) => (appr.approved && appr.likes > 3)));
+// console.log(totalEmails);
