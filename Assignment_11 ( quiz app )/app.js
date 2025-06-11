@@ -34,7 +34,6 @@ questions.forEach((q, index) => {
 
     const question = document.createElement("div");
     question.className = "question";
-    console.log(question);
     question.innerText = `${index + 1}. ${q.question}`;
     block.appendChild(question);
 

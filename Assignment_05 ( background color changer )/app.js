@@ -6,6 +6,7 @@ function randomColor() {
 };
 
 button.addEventListener('click' , () => {
+    document.body.style.background = `none`
     document.body.style.backgroundColor = `rgb(${randomColor()} , ${randomColor()} , ${randomColor()})`
-    text.innerHTML = `Background Color rgb(${randomColor()} , ${randomColor()} , ${randomColor()})`
+    text.innerHTML = `Background Color <span> rgb(${randomColor()} , ${randomColor()} , ${randomColor()}) </span>`
 });

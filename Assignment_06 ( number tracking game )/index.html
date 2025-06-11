@@ -76,6 +76,10 @@
                 font-size: 18px;
                 text-align: center;
             }
+            span {
+                display: block;
+                margin: 10px;
+            }
         }
     </style>
 </head>
@@ -85,13 +89,13 @@
 
 
     <div class="parent">
-        <h2>Guess The Number (1 - 100)</h2>
+        <h2>Guess The Number <span>(1 - 100)</span></h2>
         <input type="number" id="input" class="number">
         <form class="buttons" action="">
             <button id="first" type="button">OK</button>
             <button id="second" type="submit">Reset</button>
         </form>
-        <h3 id="result"></h3>
+        <h3 id="result" style="text-align: center;"></h3>
     </div>
 
 

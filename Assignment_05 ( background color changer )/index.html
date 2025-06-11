@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +11,18 @@
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            background: #099ed9;
+            background: linear-gradient(90deg, rgba(9, 158, 217, 1) 0%, rgba(0, 227, 95, 1) 50%, rgba(255, 237, 74, 1) 100%);
             transition: background-color .3s;
+            font-family: Arial, Helvetica, sans-serif;
         }
+
         .main {
             text-align: center;
             display: flex;
@@ -25,11 +31,13 @@
             align-items: center;
             row-gap: 20px;
         }
+
         .main h1 {
-            color: red;
+            color: blue;
         }
+
         button {
-            background-color: red;
+            background-color: blue;
             color: white;
             padding: 8px 16px;
             border-radius: 6px;
@@ -39,30 +47,39 @@
             font-size: 16px;
             margin-bottom: 20px;
         }
+
         h3 {
-            color: red;
+            color: blue;
         }
+
         @media (max-width: 420px) {
             h1 {
                 font-size: 24px;
             }
+
             button {
                 padding: 6px 12px;
                 font-size: 14px;
             }
+            span {
+                display: block !important;
+                margin: 10px 0 !important;
+            }
         }
     </style>
 </head>
+
 <body>
-    
+
     <div class="main">
         <h1>Background Color Changer</h1>
         <div class="primary">
             <button id="btn">Change Color</button>
-            <h3 id="text">Background Color rgb(255 , 255 , 255)</h3>
+            <h3 id="text">Background Color <span> rgb(red , green , blue)</span></h3>
         </div>
     </div>
 
     <script src="app.js"></script>
 </body>
+
 </html>

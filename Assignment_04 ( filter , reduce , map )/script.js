@@ -217,7 +217,7 @@ const products = [
         description: "40 inch Full HD LED TV with smart features.",
         isActive: true,
         createdAt: "2021-01-15",
-        updatedAt: "2022-10-22",
+        updatedAt: "2025-10-22",
         tags: ["LED", "Smart TV", "HD"],
         supplier: {
             name: "ElectroHouse",
@@ -371,7 +371,7 @@ const products = [
         description: "Fully Upgraded Ak 47",
         isActive: true,
         createdAt: "2021-01-15",
-        updatedAt: "2022-10-22",
+        updatedAt: "2000-10-22",
         tags: ["M416", "SCARL", "AKM"],
         supplier: {
             name: "ArmyHouse",
@@ -498,7 +498,113 @@ const products = [
 // } , {discount: -Infinity});
 // console.log(highestDiscout);
 
-// Question 66  /  6
+// Question 67  /  7
 
-// const totalEmails = products.map((vari) => (vari.reviews).filter((appr) => (appr.approved && appr.likes > 3)));
-// console.log(totalEmails);
+// const approvedEmails = products.map(product => product.reviews)
+//     .reduce((allReviews, current) => allReviews.concat(current), [])
+//     .filter(review => review.approved && review.likes > 3)
+//     .map(review => review.user.email);
+// console.log(approvedEmails);
+
+// Question 68  /  8
+
+// const verifiedCount = products.map(product => product.reviews)
+//     .reduce((allReviews, reviews) => allReviews.concat(reviews), [])
+//     .filter(review => review.verifiedPurchase).length;
+// console.log(verifiedCount);
+
+// Question 69  /  9
+
+// missing
+
+// Question 70  /  10
+
+// const activeProductsWithStock = products.filter(product => {
+//     const totalQuantity = product.variations.reduce((sum, variation) => {
+//         return sum + (variation.quantity > 0 ? 1 : 0);
+//     }, 0);
+//     return product.isActive && totalQuantity > 0;
+// });
+// console.log(activeProductsWithStock);
+
+// Question 71  /  11
+
+// const productSummaries = products.map(product => {
+//   const totalStock = product.variations.reduce((sum, variation) => sum + variation.quantity, 0);
+//   const totalRatings = product.reviews.reduce((sum, review) => sum + review.rating, 0);
+//   const avgRating = product.reviews.length > 0
+//     ? (totalRatings / product.reviews.length).toFixed(2)
+//     : "N/A";
+//   return {
+//     name: product.name,
+//     totalStock,
+//     avgRating: parseFloat(avgRating),
+//     supplierContact: product.supplier.contact
+//   };
+// });
+// console.log(productSummaries);
+
+// Question 72  /  12
+
+// function getSupplierReport(products) {
+//     return products.reduce((report, product) => {
+//         const supplierName = product.supplier.name;
+//         if (report[supplierName]) {
+//             report[supplierName]++;
+//         } else {
+//             report[supplierName] = 1;
+//         }
+//         return report;
+//     }, {});
+// };
+
+// const supplierReport = getSupplierReport(products);
+// console.log(supplierReport);
+
+// Question 73  /  13
+
+// const productsReviewedFromLahore = products.filter(product => {
+//   const reviewedByLahoreUser = product.reviews.reduce((found, review) => {
+//     return found || review.user.location === "Lahore";
+//   }, false);
+
+//   return reviewedByLahoreUser;
+// });
+// console.log(productsReviewedFromLahore);
+
+// Question 74  /  14
+
+// const top3Products = products
+//     .filter(product => product.reviews.length >= 2)
+//     .map(product => {
+//         const totalRating = product.reviews.reduce((sum, review) => sum + review.rating, 0);
+//         const avgRating = totalRating / product.reviews.length;
+//         return {
+//             id: product.id,
+//             name: product.name,
+//             avgRating: parseFloat(avgRating.toFixed(2))
+//         };
+//     })
+//     .sort((a, b) => b.avgRating - a.avgRating)
+//     .slice(0, 3);
+// console.log(top3Products);
+
+// Question 75  /  15
+
+// const inconsistentProducts = products.filter(product => {
+//   const hasInconsistency = product.variations.reduce((found, variation) => {
+//     return found || (variation.quantity === 0 && variation.isAvailable);
+//   }, false);
+
+//   return hasInconsistency;
+// });
+// console.log(inconsistentProducts);
+
+// Question 76  /  16
+
+// const uniqueTags = Array.from(
+//     products.map(product => product.tags)
+//         .reduce((allTags, tags) => allTags.concat(tags), [])
+//         .reduce((tagSet, tag) => tagSet.add(tag), new Set())
+// );
+// console.log(uniqueTags);

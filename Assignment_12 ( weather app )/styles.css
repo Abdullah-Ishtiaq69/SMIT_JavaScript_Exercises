@@ -56,3 +56,24 @@ body {
   font-size: 18px;
   color: #555;
 }
+
+@media (max-width: 380px) {
+  h1 {
+    font-size: 26px;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  .weather-container {
+    padding: 15px;
+  }
+  img {
+    width: 60px !important;
+  }
+  .temperature {
+    font-size: 26px;
+  }
+  .description {
+    font-size: 16px;
+  }
+}
