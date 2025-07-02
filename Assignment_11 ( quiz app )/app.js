@@ -1,80 +1,103 @@
 const questions = [
-    {
-        question: "JavaScript Invented by?",
-        options: ["Brendan Eich", "Tim berner Lee", "Nawaz Shareef", "Zardari"],
-        correct: "Brendan Eich"
-    },
-    {
-        question: "HTML Stands for?",
-        options: ["HyperText Makeup Language", "HyperText Markup Language", "Home Tool Markup Language", "Hyperlinks and Text Markup Language"],
-        correct: "HyperText Markup Language"
-    },
-    {
-        question: "JavaScript was invented in?",
-        options: ["1995", "2000", "1990", "1999"],
-        correct: "1995"
-    },
-    {
-        question: "CSS Stands for?",
-        options: ["Creative Style Sheet", "Cascading Style Sheet", "Computer Style System", "Colorful Style Sheet"],
-        correct: "Cascading Style Sheet"
-    },
-    {
-        question: "Which tag is used for a paragraph in HTML?",
-        options: ["para", "p", "h1", "div"],
-        correct: "p"
-    }
+  {
+    question: "HTML stand for",
+    answers: [
+      { text: "HyperText Markup Language", correct: true },
+      { text: "HyperText Programming Language", correct: false },
+      { text: "HyperTest Markup Language", correct: false },
+      { text: "Hyper Tunnel Markup Language", correct: false },
+    ],
+  },
+  {
+    question: "CSS stand for",
+    answers: [
+      { text: "Car Super Stop", correct: false },
+      { text: "Cascading Style Sheet", correct: true },
+      { text: "Car Services", correct: false },
+      { text: "Cascading Style Sheet", correct: false },
+    ],
+  },
 ];
 
-const quizContainer = document.getElementById("quiz");
+const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
 
-questions.forEach((q, index) => {
-    const block = document.createElement("div");
-    block.className = "question-block";
+let currentQuestionIndex = 0;
+let score = 0;
 
-    const question = document.createElement("div");
-    question.className = "question";
-    question.innerText = `${index + 1}. ${q.question}`;
-    block.appendChild(question);
+function startQuiz() {
+  currentQuestionIndex = 0;
+  score = 0;
+  nextButton.innerHTML = "Next";
+  showQuestion();
+}
 
-    q.options.forEach(option => {
-        const label = document.createElement("label");
-        label.className = "option";
-        label.innerHTML = `
-        <input type="radio" name="question${index}" value="${option}" />
-        ${option}
-      `;
-        block.appendChild(label);
-    });
+function showQuestion() {
+  resetState();
+  let currentQuestion = questions[currentQuestionIndex];
+  let questionNo = currentQuestionIndex + 1;
+  questionElement.innerHTML = `${questionNo}. ${currentQuestion.question}`;
 
-    quizContainer.appendChild(block);
-});
+  currentQuestion.answers.forEach((answer) => {
+    const button = document.createElement("button");
+    button.innerHTML = answer.text;
+    button.classList.add("btn");
+    answerButtons.appendChild(button);
+    if(answer.correct) {
+      button.dataset.correct = answer.correct
+    }
+    button.addEventListener("click" , selectAnswer)
+  });
+}
 
-document.getElementById("submit-btn").addEventListener("click", () => {
-    let score = 0;
+function resetState() {
+  nextButton.style.display = "none";
+  while (answerButtons.firstChild) {
+    answerButtons.removeChild(answerButtons.firstChild);
+  }
+}
 
-    questions.forEach((q, index) => {
-        const selected = document.querySelector(`input[name="question${index}"]:checked`);
-        if (selected && selected.value === q.correct) {
-            score++;
-        }
-    });
+function selectAnswer(e) {
+  const selectedBtn = e.target;
+  const isCorrect = selectedBtn.dataset.correct === "true";
+  if(isCorrect) {
+    selectedBtn.classList.add("correct");
+  } else {
+    selectedBtn.classList.add("incorrect");
+  }
 
-    const total = questions.length;
-    const percentage = Math.round((score / total) * 100);
+  Array.from(answerButtons.children).forEach(button => {
+    if(button.dataset.correct === "true") {
+      button.classList.add("correct");
+      score++;
+    } button.disabled = true;
+    nextButton.style.display = "block";
+  })
+};
 
-    const result = document.getElementById("result");
-    let count = 0;
-    const duration = 1000; // total animation time in ms
-    const stepTime = Math.max(10, Math.floor(duration / (percentage || 1))); // avoid divide by zero
+function showScore() {
+  resetState();
+  questionElement.innerHTML = `Your Score ${score} out of ${questions.length}!`;
+  nextButton.innerHTML = "Play Again";
+  nextButton.style.display = "block";
+}
 
-    result.innerText = `Your Score: 0%`;
+function handleNextButton() {
+  currentQuestionIndex++
+  if(currentQuestionIndex < questions.length) {
+    showQuestion();
+  } else {
+    showScore();
+  }
+}
 
-    const counter = setInterval(() => {
-        count++;
-        result.innerText = `Your Score: ${count}%`;
-        if (count >= percentage) {
-            clearInterval(counter);
-        }
-    }, stepTime);
-});
+nextButton.addEventListener("click", () => {
+  if(currentQuestionIndex < questions.length) {
+    handleNextButton();
+  } else {
+    startQuiz();
+  }
+})
+
+startQuiz();
