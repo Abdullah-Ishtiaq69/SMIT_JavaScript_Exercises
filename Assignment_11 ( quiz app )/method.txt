@@ -1,0 +1,11 @@
+Quiz App:
+
+1) question element, main container, next button ko get karna.
+
+2) arrays of object main data set karo.
+
+3) 2 variables banaou: pehla score save karney key liye , dusra question key index ko track karney key liye.
+
+4) question ui par dikhaney key liye aik function banaou or us main 2 variables banou: pehley main question object save karney key liye or dusra question number save karney key liye phir question element key content ko dynamic karo in 2 variables ki madad sey phir question object main foreach lagaou uskey andar button create karo or usey class do styling wali phir append karo main container main phir check karo answer true ha ya false agar true ho to us button main jisko append karwaya tha custom class do correct ki dataset property ki madad sey.
+
+5) next button par click karney par purana data delete karney key liye aik function banaou us main next button ko display none kardo phir while loop lagaou us main check karo keh main container ka child ha agar ha tou usey delete kardo phir is function ko ui waley function main call karwado.

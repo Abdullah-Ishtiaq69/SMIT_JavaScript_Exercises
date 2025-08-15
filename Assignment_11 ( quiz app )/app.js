@@ -101,3 +101,5 @@ nextButton.addEventListener("click", () => {
 })
 
 startQuiz();
+
+console.dir(document.body.children[0]);
